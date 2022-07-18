@@ -11,17 +11,21 @@ def singleton(class_):
 
 @singleton
 class FirstClass:
+    """First Class"""
+
     def __init__(self):
         self.val: int = 0
 
 
 @singleton
 class SecondClass:
+    """Second Class"""
+
     def __init__(self):
         self.val: int = 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     a = FirstClass()
     print(a.val)
     a.val = 13

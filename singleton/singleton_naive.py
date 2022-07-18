@@ -1,4 +1,4 @@
-#Naive implementation
+# Naive implementation
 class Singleton:
     __instance = None
 
@@ -10,18 +10,18 @@ class Singleton:
 
     def __init__(self):
         if not self.__instance:
-            print("First object of the class, shared instance doesn't exist yet.")
+            print("First object of the class," " shared instance doesn't exist yet.")
         self.val = 0
 
     def print_val(self):
         print(self.val)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     a = Singleton()
     a.print_val()
     a.val = 10
     a.print_val()
-
 
     b = Singleton.get_instance()
     b.print_val()

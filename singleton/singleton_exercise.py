@@ -1,5 +1,6 @@
-#from singleton.singleton_metaclass import SingletonMeta
-#metaclass=SingletonMeta
+# from singleton.singleton_metaclass import SingletonMeta
+# metaclass=SingletonMeta
+
 
 class Cake:
     class __CakeSingleton:
@@ -10,10 +11,11 @@ class Cake:
             self._name = name
 
         def get_name(self) -> str:
-            return  self._name
+            return self._name
 
         def print_name(self):
             print(self._name)
+
     __instance = None
 
     def __new__(cls):
@@ -21,7 +23,8 @@ class Cake:
             Cake.__instance = Cake.__CakeSingleton()
         return Cake.__instance
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     cake_1 = Cake()
     cake_1.print_name()
     cake_1.set_name("Poppy")
